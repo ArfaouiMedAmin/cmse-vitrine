@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Zap, PhoneCall } from 'lucide-react';
+import cmseLogo from '../assets/images/cmse_log.png';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -14,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <a href="#" className="logo">
-          <img src="/images/cmse_log.png" alt="CMSE Logo" style={{ height: '50px', objectFit: 'contain', borderRadius: '4px' }} />
+          <img src={cmseLogo} alt="CMSE Logo" style={{ height: '50px', objectFit: 'contain', borderRadius: '4px' }} />
         </a>
 
         <ul className="nav-links">

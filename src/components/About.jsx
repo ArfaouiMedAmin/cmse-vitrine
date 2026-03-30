@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import resGenerator from '../assets/images/residential_generator.png';
 
 const About = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const About = () => {
 
         <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }}>
           <img 
-            src="/images/residential_generator.png?v=2" 
+            src={resGenerator} 
             alt="Residential Backup Generator Schema" 
             style={{ 
               width: '100%', 
