@@ -10,21 +10,23 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    const formUrl = 'https://formsubmit.co/ajax/cmse2k@gmail.com';
     const formData = new FormData(e.target);
+    formData.append("access_key", "d8fb0a20-72f9-4a33-bca7-a5cacb512d1e");
     
     try {
-      const response = await fetch(formUrl, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
         headers: {
-            'Accept': 'application/json'
+          'Accept': 'application/json'
         }
       });
-      if (response.ok) {
+      const data = await response.json();
+      
+      if (data.success) {
         setStatus('success');
         e.target.reset();
-        setTimeout(() => setStatus(''), 5000); // clear success msg after 5s
+        setTimeout(() => setStatus(''), 5000);
       } else {
         setStatus('error');
       }
@@ -37,10 +39,12 @@ const Contact = () => {
     <section id="contact" className="section">
       <div className="container">
         <h2 className="section-title">{t('contact.title')}</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          {/* FormSubmit Configuration */}
-          <input type="hidden" name="_subject" value="New Submission from Website!" />
-          <input type="hidden" name="_captcha" value="false" />
+        <form 
+          className="contact-form" 
+          onSubmit={handleSubmit}
+        >
+          {/* Web3Forms Configuration */}
+          <input type="hidden" name="subject" value="Nouveau message depuis le site Web CMSE !" />
 
           <div className="form-group">
             <input name="name" type="text" placeholder={t('contact.name')} required />
@@ -58,15 +62,28 @@ const Contact = () => {
 
           {status === 'success' && (
             <p style={{ color: '#4ade80', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '15px' }}>
-              <CheckCircle size={18} /> Message sent successfully!
+              <CheckCircle size={18} /> Message envoyé avec succès !
             </p>
           )}
           {status === 'error' && (
             <p style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '15px' }}>
-              <AlertCircle size={18} /> Something went wrong. Please try again.
+              <AlertCircle size={18} /> Une erreur s'est produite. Veuillez réessayer.
             </p>
           )}
         </form>
+
+        <div style={{ marginTop: '60px', width: '100%', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.5)' }}>
+          <iframe 
+            src="https://www.google.com/maps?q=36.538512,10.842229&z=15&output=embed" 
+            width="100%" 
+            height="450" 
+            style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg) brightness(85%) contrast(80%)' }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="CMSE Location Map"
+          ></iframe>
+        </div>
       </div>
     </section>
   );
