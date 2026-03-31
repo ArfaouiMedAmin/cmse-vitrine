@@ -7,11 +7,13 @@ import Hero from './components/Hero';
 import Partners from './components/Partners';
 import Stats from './components/Stats';
 import Services from './components/Services';
+import Interventions from './components/Interventions';
 import FAQ from './components/FAQ';
 import About from './components/About';
 import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import Products from './components/Products';
 
 function App() {
   const { i18n } = useTranslation();
@@ -27,7 +29,9 @@ function App() {
       <Hero />
       <Stats />
       <Partners />
+      <Products />
       <Services />
+      <Interventions />
       <FAQ />
       <About />
       <Contact />

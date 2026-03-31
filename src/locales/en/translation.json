@@ -2,14 +2,28 @@
   "translation": {
     "nav": {
       "home": "Home",
+      "products": "Products",
       "services": "Services",
+      "interventions": "Our Work",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "emergency": "Emergency 24/7"
     },
     "hero": {
       "title": "Unbreakable Power",
-      "subtitle": "CMSE: Cap-Bon Maintenance and Electrical Services. Sales, Installation, and Repair of Diesel Generators for uninterrupted industrial power.",
+      "subtitle": "**CMSE – Cap-Bon Maintenance and Electrical Services** | Since **2000**\n\nExperts in **energy solutions** since 2000, we provide **sales**, **installation**, and **maintenance** of diesel generators for **industrial and residential** sectors.\n\n**Reliability**, **performance**, and **power continuity** are at the core of our commitments, with a wide range of equipment and spare parts tailored to all your needs.",
       "cta": "Get a Quote"
+    },
+    "products": {
+      "title": "Our Products",
+      "dse": {
+        "title": "DSE Controllers",
+        "desc": "Advanced auto start & AMF control modules for generator sets."
+      },
+      "diesel": {
+        "title": "Diesel Generators",
+        "desc": "High-performance diesel generators for robust industrial power."
+      }
     },
     "partners": {
       "title": "Official Representative",
@@ -33,7 +47,7 @@
     },
     "about": {
       "title": "About CMSE",
-      "desc": "Based in Cap-Bon, CMSE is your trusted partner for high-performance energy solutions. We put our expertise at the service of your industrial operations' continuity."
+      "desc": "Founded in 2000 and based in Cap-Bon, CMSE is your trusted partner for high-performance energy solutions. We put our expertise at the service of your industrial operations' continuity."
     },
     "contact": {
       "title": "Contact Us",
@@ -46,7 +60,7 @@
       "rights": "All rights reserved."
     },
     "stats": {
-      "exp_value": "15+",
+      "exp_value": "25+",
       "exp_text": "Years Experience",
       "servers_value": "500+",
       "servers_text": "Generators Serviced",
@@ -60,12 +74,18 @@
       "q2": "Are you official Deep Sea Electronics representatives?",
       "a2": "Yes, CMSE is the official legal representative and distributor for Deep Sea Electronics in Tunisia and North Africa.",
       "q3": "Do you install both residential and industrial units?",
-      "a3": "Absolutely. We install and maintain everything from compact residential backup generators to massive industrial power solutions."
+      "a3": "Absolutely. We install and maintain everything from compact residential backup generators to massive industrial power solutions.",
+      "q4": "What products do you sell?",
+      "a4": "We sell industrial and domestic diesel generators, a variety of spare parts, as well as controllers and other Deep Sea Electronics (DSE) products."
     },
     "cta": {
       "title": "Experiencing a Power Failure?",
       "subtitle": "Don't halt your operations. Get our industrial support team on-site immediately.",
       "button": "Call Now For Emergency Support"
+    },
+    "interventions": {
+      "title": "Our Interventions & Field Work",
+      "desc": "Discover our on-site achievements and the quality of our industrial installations."
     }
   }
 }

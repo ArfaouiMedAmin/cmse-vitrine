@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Zap, PhoneCall } from 'lucide-react';
+import { PhoneCall, Menu, X } from 'lucide-react';
 import cmseLogo from '../assets/images/cmse_log.png';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -18,11 +19,13 @@ const Navbar = () => {
           <img src={cmseLogo} alt="CMSE Logo" style={{ height: '50px', objectFit: 'contain', borderRadius: '4px' }} />
         </a>
 
-        <ul className="nav-links">
-          <li><a href="#hero">{t('nav.home')}</a></li>
-          <li><a href="#services">{t('nav.services')}</a></li>
-          <li><a href="#about">{t('nav.about')}</a></li>
-          <li><a href="#contact">{t('nav.contact')}</a></li>
+        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} style={{ display: 'flex', alignItems: 'center', margin: 0, padding: 0 }}>
+          <li><a href="#hero" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.home')}</a></li>
+          <li><a href="#products" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.products')}</a></li>
+          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.services')}</a></li>
+          <li><a href="#interventions" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.interventions')}</a></li>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.about')}</a></li>
+          <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t('nav.contact')}</a></li>
         </ul>
 
         <div className="lang-switch" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -45,7 +48,7 @@ const Navbar = () => {
             }}
           >
             <PhoneCall size={16} />
-            <span className="hide-on-mobile">{t('cta.title')}</span>
+            <span className="hide-on-mobile">{t('nav.emergency')}</span>
           </a>
 
           <div style={{ display: 'flex' }}>
@@ -66,10 +69,14 @@ const Navbar = () => {
                 outline: 'none',
               }}
             >
-              <option value="fr">FR / Français</option>
-              <option value="en">EN / English</option>
-              <option value="ar">AR / العربية</option>
+              <option value="fr">FR</option>
+              <option value="en">EN</option>
+              <option value="ar">AR</option>
             </select>
+          </div>
+          
+          <div className="mobile-menu-icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </div>
         </div>
       </div>
