@@ -67,6 +67,19 @@ const Contact = () => {
             </p>
           )}
         </form>
+
+        <div style={{ marginTop: '60px', width: '100%', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.5)' }}>
+          <iframe 
+            src="https://www.google.com/maps?q=36.538512,10.842229&z=15&output=embed" 
+            width="100%" 
+            height="450" 
+            style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg) brightness(85%) contrast(80%)' }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="CMSE Location Map"
+          ></iframe>
+        </div>
       </div>
     </section>
   );

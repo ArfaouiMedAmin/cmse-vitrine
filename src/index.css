@@ -46,6 +46,13 @@ body {
 }
 
 /* Utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -120,7 +127,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
 }
 
@@ -131,6 +138,7 @@ body {
   text-transform: uppercase;
   transition: color var(--transition-speed) ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -175,7 +183,9 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 120px 0 80px;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.94)), url('/images/industrial_generator.png?v=2') center/cover no-repeat;
@@ -308,10 +318,51 @@ body {
   color: var(--cmse-yellow);
 }
 
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .nav-links { display: none; } /* Simplified for now, add mobile menu later if needed */
-  .section-title { font-size: 2rem; }
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--cmse-yellow);
+  margin-left: 15px;
 }
 
-@media (max-width: 768px) { .hide-on-mobile { display: none; } }
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .hero h1 { font-size: 2.5rem; }
+  .section-title { font-size: 2rem; }
+  .hide-on-mobile { display: none; }
+  
+  .mobile-menu-icon {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    flex-direction: column !important;
+    padding: 20px 0;
+    gap: 30px !important;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    clip-path: circle(0px at top left);
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+  }
+  
+  .nav-links.active {
+    clip-path: circle(200% at top left);
+    pointer-events: auto;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+}

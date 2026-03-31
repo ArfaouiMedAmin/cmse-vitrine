@@ -2,14 +2,28 @@
   "translation": {
     "nav": {
       "home": "Accueil",
+      "products": "Produits",
       "services": "Nos Services",
+      "interventions": "Nos Interventions",
       "about": "À Propos",
-      "contact": "Contact"
+      "contact": "Contact",
+      "emergency": "Urgence 24/7"
     },
     "hero": {
       "title": "L'Énergie à Toute Épreuve",
-      "subtitle": "CMSE : Cap-Bon Maintenance et Services Électriques. Vente, Installation et Réparation de Groupes Électrogènes pour une alimentation industrielle ininterrompue.",
+      "subtitle": "**CMSE – Cap-Bon Maintenance et Services Électriques** | Depuis **2000**\n\nExperts en **solutions énergétiques** depuis 2000, nous assurons la **vente**, l’**installation** et la **maintenance** de groupes électrogènes pour les secteurs **industriel et résidentiel**.\n\n**Fiabilité**, **performance** et **continuité d’alimentation** sont au cœur de nos engagements, avec une large gamme d’équipements et de pièces détachées adaptées à tous vos besoins.",
       "cta": "Demander un Devis"
+    },
+    "products": {
+      "title": "Nos Produits",
+      "dse": {
+        "title": "Automates DSE",
+        "desc": "Modules de contrôle à démarrage automatique et AMF avancés pour groupes électrogènes."
+      },
+      "diesel": {
+        "title": "Groupes Électrogènes Diesel",
+        "desc": "Générateurs diesel haute performance pour une alimentation industrielle robuste."
+      }
     },
     "partners": {
       "title": "Représentant Officiel",
@@ -33,7 +47,7 @@
     },
     "about": {
       "title": "À Propos de CMSE",
-      "desc": "Basée au Cap-Bon, CMSE est votre partenaire de confiance pour des solutions énergétiques performantes. Nous mettons notre expertise au service de la continuité de vos opérations industrielles."
+      "desc": "Fondée en 2000 et basée au Cap-Bon, CMSE est votre partenaire de confiance pour des solutions énergétiques performantes. Nous mettons notre expertise au service de la continuité de vos opérations industrielles."
     },
     "contact": {
       "title": "Contactez-Nous",
@@ -46,7 +60,7 @@
       "rights": "Tous droits réservés."
     },
     "stats": {
-      "exp_value": "15+",
+      "exp_value": "25+",
       "exp_text": "Années d'Expérience",
       "servers_value": "500+",
       "servers_text": "Générateurs Entretenus",
@@ -60,12 +74,18 @@
       "q2": "Êtes-vous des représentants officiels de Deep Sea Electronics ?",
       "a2": "Oui, CMSE est le représentant légal officiel et distributeur de DSE en Tunisie et en Afrique du Nord.",
       "q3": "Installez-vous des groupes électrogènes pour particuliers et industriels ?",
-      "a3": "Absolument. Nous installons et entretenons des unités allant des générateurs résidentiels compacts aux énormes solutions industrielles."
+      "a3": "Absolument. Nous installons et entretenons des unités allant des générateurs résidentiels compacts aux énormes solutions industrielles.",
+      "q4": "Qu'est-ce que vous vendez ?",
+      "a4": "Nous vendons des groupes électrogènes (industriels et domestiques), une grande variété de pièces de rechange, ainsi que des automates et autres produits Deep Sea Electronics (DSE)."
     },
     "cta": {
       "title": "Vous subissez une Panne de Courant ?",
       "subtitle": "N'arrêtez pas vos opérations. Obtenez une intervention d'urgence sur site immédiatement.",
       "button": "Appeler pour une Urgence 24/7"
+    },
+    "interventions": {
+      "title": "Nos Interventions & Aventures",
+      "desc": "Découvrez nos réalisations sur le terrain et la qualité de nos installations industrielles."
     }
   }
 }
